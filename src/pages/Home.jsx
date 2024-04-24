@@ -9,7 +9,7 @@ import Hero2 from "../components/Home/Hero2";
 const Home = () => {
   return (
     <>
-      <Hero2 />
+      <Hero />
       {/* <PickupDropSelection /> */}
       <CarCategoriesSection />
       <CarsSection />
