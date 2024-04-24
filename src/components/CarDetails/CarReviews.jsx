@@ -60,10 +60,10 @@ const CarReviews = ({ review }) => {
       </div>
       <div className="w-full flex justify-center">
         <button
-          className={`${styles.secondaryText} text-base font-semibold flex items-center gap-1`}
+          className={`${styles.secondaryText} text-sm font-medium flex items-center gap-1`}
           onClick={() => setShowReviews(!showReviews)}
         >
-          View More{" "}
+          Show All{" "}
           {showReviews ? (
             <MdKeyboardArrowUp className="text-xl" />
           ) : (
