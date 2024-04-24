@@ -27,6 +27,8 @@ import Porsche2 from "./porsche-911-1.jpg";
 import Porsche3 from "./porsche-911-2.webp";
 import Porsche4 from "./porsche-911-3.jpeg";
 
+import Hero2Image from "./hero-2.png";
+
 export {
   Logo,
   HeroCardImage1,
@@ -48,4 +50,5 @@ export {
   Porsche2,
   Porsche3,
   Porsche4,
+  Hero2Image,
 };

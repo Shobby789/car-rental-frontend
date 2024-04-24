@@ -87,3 +87,8 @@ body {
   background-position: center;
   /* filter: brightness(70%); */
 }
+
+.box_shadow {
+  background: #f0f1f6;
+  /* box-shadow: 300px 100px 300px #3563e9; */
+}
