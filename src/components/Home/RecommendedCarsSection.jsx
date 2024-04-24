@@ -2,6 +2,7 @@ import React from "react";
 import { styles } from "../../styles/styles";
 import CarCard from "./CarCard";
 import { recommendedcars } from "../../constants/recommendedcars";
+import { Link } from "react-router-dom";
 
 const RecommendedCarsSection = () => {
   return (
@@ -12,9 +13,12 @@ const RecommendedCarsSection = () => {
         <h2 className={`${styles.secondaryText} text-xl font-semibold`}>
           Recommended Cars
         </h2>
-        <button className={`${styles.primaryText} font-semibold text-base`}>
+        <Link
+          to="/car-categories"
+          className={`${styles.primaryText} font-semibold text-base`}
+        >
           View All
-        </button>
+        </Link>
       </div>
       <div
         className={`${styles.paddingHorizontal} grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-6`}
