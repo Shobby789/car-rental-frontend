@@ -13,11 +13,15 @@ const CarrentalSummarySection = () => {
           of your rental car.
         </p>
       </div>
-      <div className="w-full grid grid-cols-12">
-        <div className="col-span-5 flex justify-start items-center">
-          <img src={HeroCardImage1} className="w-[152px]" alt="" />
+      <div className="w-full grid grid-cols-12 gap-y-4">
+        <div className="col-span-12 md:col-span-5 flex justify-start items-center">
+          <img
+            src={HeroCardImage1}
+            className="w-[152px] md:w-full h-20"
+            alt=""
+          />
         </div>
-        <div className="col-span-7 flex flex-col gap-y-1">
+        <div className="col-span-12 md:col-span-7 flex flex-col gap-y-1">
           <p className="text-3xl font-bold">Nissan GT - R</p>
           <div className="flex items-center gap-x-1">
             <FaStar className="text-yellow-400 text-sm" />
@@ -35,7 +39,9 @@ const CarrentalSummarySection = () => {
       </div>
       <hr />
       <div className="w-full flex justify-between items-center">
-        <p className={`${styles.secondaryText} font-medium text-base`}>Subtotal</p>
+        <p className={`${styles.secondaryText} font-medium text-base`}>
+          Subtotal
+        </p>
         <p className="font-semibold text-base">$80.00</p>
       </div>
       <div className="w-full flex justify-between items-center">
@@ -44,11 +50,13 @@ const CarrentalSummarySection = () => {
       </div>
       <div className="w-full flex justify-between items-center">
         <div>
-            <p className="font-bold text-xl">Total Rental Price</p>
-            <p className={`${styles.secondaryText} text-xs font-medium`}>Overall price and includes rental discount</p>
+          <p className="font-bold text-xl">Total Rental Price</p>
+          <p className={`${styles.secondaryText} text-xs font-medium`}>
+            Overall price and includes rental discount
+          </p>
         </div>
         <div>
-            <p className="font-bold text-3xl">$80.00</p>
+          <p className="font-bold text-3xl">$80.00</p>
         </div>
       </div>
     </div>

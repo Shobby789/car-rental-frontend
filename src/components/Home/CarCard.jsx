@@ -20,7 +20,7 @@ const CarCard = ({ car }) => {
     navigate(`/car-details/${3}`);
   };
   return (
-    <div className="h-auto lg:h-[388px] bg-white card-shadow rounded-lg flex flex-col items-start justify-between py-6 px-8 md:p-6">
+    <div className="h-auto lg:h-[388px] bg-white card-shadow rounded-lg flex flex-col items-start justify-between gap-y-4 py-6 px-8 md:p-6">
       <div className="w-full flex flex-col gap-y-1">
         <div className="flex justify-between items-center">
           <p className="text-xl font-semibold">{car?.title}</p>

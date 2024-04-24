@@ -60,7 +60,10 @@ const Navbar = () => {
           <IoSettingsSharp className="text-xl text-[#596780]" />
         </span> */}
         <div className="relative">
-          <button className="w-10 h-10 rounded-full flex items-center justify-center border cursor-pointer" onClick={()=> setShowProfileDropdown(!showProfileDropdown)}>
+          <button
+            className="w-10 h-10 rounded-full flex items-center justify-center border cursor-pointer"
+            onClick={() => setShowProfileDropdown(!showProfileDropdown)}
+          >
             <img
               src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
@@ -70,7 +73,7 @@ const Navbar = () => {
           {showProfileDropdown && <ProfileDropdown />}
         </div>
       </div>
-      <div className="w-full flex items-center justify-between lg:hidden gap-3 py-1">
+      <div className="w-full flex items-center justify-between lg:hidden gap-2 py-1">
         <div className="w-full border rounded-lg h-12 flex items-center justify-start px-2">
           <CiSearch className="w-6 h-6 text-[#596780]" />
           <input
@@ -80,7 +83,7 @@ const Navbar = () => {
           />
         </div>
         <div>
-          <button className="w-12 h-12 border rounded-lg flex justify-center items-center">
+          <button className="w-10 h-12 border rounded-lg flex justify-center items-center">
             <LuSettings2 className="w-6 h-6 text-[#596780]" />
           </button>
         </div>
