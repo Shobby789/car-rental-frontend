@@ -22,7 +22,8 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(loginUser(data));
+    // dispatch(loginUser(data));
+    navigate("/");
     console.log("login data >> ", data);
   };
 

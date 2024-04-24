@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { registerUser } from "../redux/authSlice/authSlice";
 
 const Signup = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [data, setData] = useState({
     firstname: "",
     lastname: "",
@@ -25,14 +26,15 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(registerUser(data));
+    // dispatch(registerUser(data));
+    navigate("/login");
     console.log("register data >> ", data);
   };
 
   return (
-    <div className="w-full bg-white flex justify-center items-center py-24">
+    <div className="w-full bg-slate-50 flex justify-center items-center py-6: md:py-8 lg:py-16">
       {/* <div className="h-full w-[30%] bg-[#3563E9]"></div> */}
-      <div className="h-full py-12 px-6 md:px-20 flex items-center justify-center rounded-xl shadow-xl">
+      <div className="h-full py-12 bg-white px-6 md:px-20 flex items-center justify-center rounded-xl shadow-xl">
         <form onSubmit={handleSubmit} className="w-full flex flex-col gap-y-8">
           <div className="flex flex-col gap-y-1">
             <h1 className="text-2xl font-bold">Welcome to MORENT</h1>
