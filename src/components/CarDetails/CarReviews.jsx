@@ -5,7 +5,7 @@ import { carreviews } from "../../constants/carreviews";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 const CarReviews = ({ review }) => {
-  const [showReviews, setShowReviews] = useState(false)
+  const [showReviews, setShowReviews] = useState(false);
   return (
     <div className="w-full bg-white py-6 rounded-xl p-4 md:p-6 flex flex-col gap-y-6">
       <p className="text-xl font-bold">
@@ -25,7 +25,7 @@ const CarReviews = ({ review }) => {
                   className="w-14 h-14 rounded-full mx-auto"
                 />
               </div>
-              <div className="col-span-10 md:col-span-11 py-2 flex flex-col items-start gap-y-4">
+              <div className="col-span-10 md:col-span-11 pl-3 md:pl-0 py-2 flex flex-col items-start gap-y-4">
                 <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center">
                   <div className="flex flex-col gap-y-1 items-start justify-center">
                     <p className="text-xl font-bold">{review?.user_name}</p>
@@ -59,7 +59,17 @@ const CarReviews = ({ review }) => {
         })}
       </div>
       <div className="w-full flex justify-center">
-        <button className={`${styles.secondaryText} text-base font-semibold flex items-center gap-1`} onClick={()=> setShowReviews(!showReviews)}>View More {showReviews ? <MdKeyboardArrowUp className="text-xl"/>:<MdKeyboardArrowDown className="text-xl"/>}</button>
+        <button
+          className={`${styles.secondaryText} text-base font-semibold flex items-center gap-1`}
+          onClick={() => setShowReviews(!showReviews)}
+        >
+          View More{" "}
+          {showReviews ? (
+            <MdKeyboardArrowUp className="text-xl" />
+          ) : (
+            <MdKeyboardArrowDown className="text-xl" />
+          )}
+        </button>
       </div>
     </div>
   );
