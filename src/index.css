@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f6f7f9;
+}
+
+.card-shadow {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* / width /  */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+}
+
+/* / Track /  */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* / Handle /  */
+::-webkit-scrollbar-thumb {
+  background: #3563e9;
+}
+
+/* / Handle on hover /  */
+::-webkit-scrollbar-thumb:hover {
+  background: #3563e9;
+  cursor: pointer;
+}
+
+.notification-container::-webkit-scrollbar-thumb {
+  background: #3563e9;
+  border-radius: 8px;
+}
+.notification-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  color: #3563e9;
+  border-radius: 50%;
+  display: grid;
+  background: conic-gradient(from 90deg at 4px 4px, #0000 90deg, currentColor 0) -4px -4px /
+      calc(50% + 2px) calc(50% + 2px),
+    radial-gradient(
+        farthest-side,
+        currentColor 6px,
+        #0000 7px calc(100% - 6px),
+        currentColor calc(100% - 5px)
+      )
+      no-repeat;
+  animation: l10 2s infinite linear;
+  position: relative;
+}
+.loader:before {
+  content: "";
+  border-radius: inherit;
+  background: inherit;
+  transform: rotate(45deg);
+}
+
+@keyframes l10 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+.login-page {
+  background-image: url("https://images.unsplash.com/photo-1621658788810-f13aa82c7b5c?q=80&w=2032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  /* filter: brightness(70%); */
+}
